@@ -1,0 +1,16 @@
+<view class="container">
+  <view >{{today_date}} {{today_week}}</view>
+<view class="divLine"></view>
+<view class="divLine"></view>
+  <view slot = "content">
+    <textarea class="summary-input" maxlength="2000" placeholder-class="" bindinput="getInput" auto-focus="true" placeholder="写下你的今日总结吧" value="{{}}">
+    </textarea>
+  </view>
+  <view slot="footer">统计：{{length}}字</view>
+  <!-- <input class="summary-input" type="text" placeholder="写下你的今日总结吧" bindinput="inputSummary" style="border: 1px solid #000000;white-space: pre-wrap;"/>
+  <button class="save-button" bindtap="saveSummary">保存</button> -->
+</view>
+<view class="divLine"></view>
+<view class="divLine"></view>
+
+<button class="save-button" type="primary" bindtap="saveSummary">保存</button>

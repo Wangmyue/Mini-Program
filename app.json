@@ -3,7 +3,8 @@
     "pages/timetable/timetable",
     "pages/clock/clock",
     "pages/summary/summary",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/summary_write/write"
   ],
   "window": {
     "backgroundTextStyle":"light",

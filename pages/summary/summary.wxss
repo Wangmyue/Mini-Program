@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.summary-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.summary-item {
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 1rpx black;
+}
+

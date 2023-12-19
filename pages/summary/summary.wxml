@@ -1,1 +1,8 @@
-每日总结
+<button type="primary" bindtap="goToWrite">记录总结</button>
+<view class="container">
+  <view class="summary-list" wx:for="{{summaries}}" wx:for-index="index" wx:for-item="summary">
+    <text class="summary-item">
+      {{summary}}
+    </text>
+  </view>
+</view>
