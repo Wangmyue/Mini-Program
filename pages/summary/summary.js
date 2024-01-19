@@ -4,7 +4,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    summaries: [] // 保存历史总结列表，从write页传过来
+    summaries: [], // 保存历史总结列表，从write页传过来
+    maxHeight: 300,
+    showIndex: [],
+    isShow: [],
   },
   onRefresh: function () {
     console.log(getApp().globalData.summaries);
@@ -24,16 +27,8 @@ Page({
     this.onRefresh();
   },
   onLoad: function (options) {
-    // 从页面跳转中获取历史总结列表数据并赋值给data中的summaries数组
-    // wx.getStorage({
-    //   key: 'summary',
-    //   success: (summary) => {
-    //     console.log(summary.data);
-    //     this.data.summaries.push(summary.data);
-    //   }
-    // })
-    
     const summaries = getApp().globalData.summaries;
+    const times = getApp().globalData.times;
     this.setData({
       summaries: summaries,
     });
