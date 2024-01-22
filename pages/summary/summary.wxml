@@ -9,3 +9,4 @@
 </view>
 <view class="standView"></view>
 <button type="primary" bindtap="goToWrite" style="width: 100%; position: fixed; bottom: 0;">记录总结</button>
+
