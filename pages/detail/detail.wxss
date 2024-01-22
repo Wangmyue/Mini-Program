@@ -1,0 +1,17 @@
+page {
+  padding: 30rpx 20rpx;
+  background: #F5F5F5;
+}
+
+.container{
+  text-align: center;
+}
+
+._input {
+  padding: 10rpx;
+  border: 1px solid black;
+}
+
+.save-button {
+  margin-top: 10px;
+}

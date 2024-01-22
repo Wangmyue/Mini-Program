@@ -1,2 +1,79 @@
 <!--pages/timetable/timetable.wxml-->
-<text>课程表</text>
+<!-- 头部 -->
+<!-- 头部 -->
+<view class="flex-row head">
+  <view bind:tap="toDetail" class="head-left flex-column j_c">
+    <image src="https://s3.bmp.ovh/imgs/2022/07/27/6289fe4ab016c74a.png" class="head-icon" />
+    <text class="head-left-text one">我的</text>
+    <text class="head-left-text two">课表</text>
+    <text class="head-curr-week">{{currentWeek}}</text>
+  </view>
+  <view class="head-right flex-row j_b">
+    <view class="flex-column j_c" wx:for="{{weekList}}" wx:key="list">
+      <text class="head-week {{item.isCurr && 'head-right-curr'}}">{{item.week}}</text>
+      <text class=" {{item.isCurr && 'head-right-curr'}}">{{item.isCurr?'今天':item.day}}</text>
+    </view>
+  </view>
+</view>
+<!-- 1-4节课 -->
+<view class="container flex-row mb20">
+  <view class="container-left flex-column j_b">
+    <block wx:for="{{time.one}}" wx:key="list">
+      <view class="flex-column j_c">
+        <text class="con-title">{{item.index}}</text>
+        <text>{{item.timeStart}}</text>
+        <text>{{item.timeEnd}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="container-right  flex col j_c" style="--len:{{time.one.length}}">
+    <view class="con-item flex-column j_c " wx:for="{{schedule.one}}" wx:key="list" style="background: {{item.color}};--l:1;--s:{{item.start}};--left:{{item.day}};--step:{{item.step}}" catchtap="getDetail" data-item="{{item}}">
+      <text class="con-item-subj line_ellipsis">{{item.sub}}</text>
+      <text class="line_ellipsis">{{item.tec}}</text>
+      <text class="line_ellipsis">{{item.add}}</text>
+    </view>
+    <image src="https://s3.bmp.ovh/imgs/2022/07/27/85dabf1d5821a98b.png" class="con-icon" />
+  </view>
+</view>
+<!-- 5-课间休息 -->
+<view class="container flex-row mb20">
+  <view class="container-left">
+    <block wx:for="{{time.gap}}" wx:key="list">
+      <view class="flex-column j_c">
+        <text class="con-title">{{item.index}}</text>
+        <text>{{item.timeStart}}</text>
+        <text>{{item.timeEnd}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="container-right right-gap">午休
+    <image src="https://s3.bmp.ovh/imgs/2022/07/27/85dabf1d5821a98b.png" class="con-icon" />
+  </view>
+</view>
+<!-- 6-11节课 -->
+<view class="container flex-row mb20">
+  <view class="container-left ">
+    <block wx:for="{{time.two}}" wx:key="list">
+      <view class="flex-column j_c">
+        <text class="con-title">{{item.index}}</text>
+        <text>{{item.timeStart}}</text>
+        <text>{{item.timeEnd}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="container-right  flex col j_c" style="--len:{{time.two.length}}">
+    <view class="con-item flex-column j_c " wx:for="{{schedule.two}}" wx:key="list" style="background: {{item.color}};--l:6;--s:{{item.start}};--left:{{item.day}};--step:{{item.step}}" catchtap="getDetail" data-item="{{item}}">
+      <text class="con-item-subj line_ellipsis">{{item.sub}}</text>
+      <text class="line_ellipsis">{{item.tec}}</text>
+      <text class="line_ellipsis">{{item.add}}</text>
+    </view>
+    <image src="https://s3.bmp.ovh/imgs/2022/07/27/85dabf1d5821a98b.png" class="con-icon" />
+  </view>
+</view>
+<!-- 详情弹框 -->
+<view class="mask" hidden="{{!isShow}}" catchtap="close"></view>
+<view class="modal flex-column j_c {{isShow ? 'show':'noShow'}}" style="background: {{current.color}};">
+  <view>{{current.sub}}</view>
+  <view>{{current.add}}</view>
+  <view>{{current.tec}}</view>
+</view>

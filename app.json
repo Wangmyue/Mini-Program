@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/timetable/timetable",
+    "pages/detail/detail",
     "pages/clock/clock",
     "pages/summary/summary",
     "pages/mine/mine",
@@ -12,6 +13,10 @@
     "navigationBarTitleText": "小程序",
     "navigationBarTextStyle":"black"
   },
+  
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  
   "tabBar": {
     "color": "#a9b7b7",
     "selectedColor": "#11cd6e",
