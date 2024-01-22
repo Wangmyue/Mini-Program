@@ -9,18 +9,3 @@
 </view>
 <view class="standView"></view>
 <button type="primary" bindtap="goToWrite" class="button">记录总结</button>
-
-<!-- <view class="container">
-  <view class="summary-block" wx:for="{{summaries}}" wx:key="index" wx:for-item="summary"
-  wx:for="{{times}}" wx:for-index="indexT" wx:for-item="summary-time">
-    <view class="summary-text">
-      <view class="summary-item">{{summary}}</view>
-      <view class="summary-time">{{summary-time}}</view>
-    </view>
-    <view class="summary-text">{{ summary }}</view>
-    <view class="summary-time">{{ summary-time }}</view>
-    <text class="summary-item">
-      {{summary}}
-    </text>
-  </view>
-</view> -->

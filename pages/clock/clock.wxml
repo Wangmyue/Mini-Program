@@ -1,1 +1,21 @@
-番茄钟
+<!--  输入框  -->
+<view class="search_box">
+	<view class='search'>
+		<input type='text' placeholder='输入内容生成待办' value="{{inputValue}}" bindinput='inputBind' bindconfirm='addsearch'></input>
+	</view>
+</view>
+
+<!-- 未完成 -->
+<view>待办 {{ValueList.length}}</view>
+<view class="wei_box" wx:for="{{ValueList}}" wx:key="index">
+	<icon type="{{item.iSshow?'success':'circle'}}" bindtap='nolist' data-iSshow="{{item.iSshow}}" data-index="{{index}}"></icon><text>{{item.inputValue}}</text>
+	<icon type="cancel" bindtap='nodelete' data-index="{{index}}"></icon>
+</view>
+
+<!-- 已完成 -->
+<view>历史 {{yesList.length}}</view>
+<view class="wei_box" wx:for="{{yesList}}" wx:key="index">
+	<icon type="{{item.iSshow?'success':'circle'}}" bindtap='yeslist' data-iSshow="{{item.iSshow}}" data-index="{{index}}"></icon><text>{{item.inputValue}}</text>
+	<icon type="cancel" bindtap='yesdelete'></icon>
+</view>
+

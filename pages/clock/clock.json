@@ -1,3 +1,13 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "番茄钟",   
+  "usingComponents": {},
+  "enablePullDownRefresh": false,        
+  "backgroundTextStyle": "light",         
+  "backgroundColor": "#fff",          
+  "disableScroll": false,                 
+  "onReachBottomDistance": 50,            
+  "pageOrientation": "portrait",          
+  "navigationBarBackgroundColor": "#fff",  
+  "navigationBarTextStyle": "black"      
+
 }
