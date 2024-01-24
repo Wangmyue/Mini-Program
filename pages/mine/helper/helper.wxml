@@ -1,0 +1,48 @@
+<!--pages/mine/helper/helper.wxml-->
+
+<image class="background" src="/pages/mine/images/lightblue.jpg" mode="widthFix" ></image>
+<view class="text_helper">
+	<view class="helper-title">使用指南</view>
+	<view class="helper-text" style="white-space: pre-wrap;" >
+    <view class="sub">课程表</view>
+1. 点击我的课表，输入课程名称、教室、老师、节数等信息
+2. 点击已添加课程，弹出课程信息
+    <view class="sub">待办事项</view>
+1、上方输入框输入回车即可生成待办；
+2、实时显示待办数量和历史已完成待办数量；
+3、可在待办和历史之间自由转移；点击左侧圆圈可使待办完成或取消完成（即回到待办状态）
+4、末尾删除按钮可删除该条待办；
+
+<view class="sub">每日总结</view>
+1.过往总结展示
+按照记录时间倒叙展示
+
+`不能删改哦~`
+过一天有过一天的收获 不必隐藏 好好看看过去的自己吧
+
+2.记录总结
++ 显示记录时的日期
++ 在框内记录内容，下方显示统计字数
++ 不允许保存空白内容
+
+<view class="sub">我的设置</view>
+1. 个人信息：昵称/性别/电话
++ 点击对应栏目，将跳转至输入界面
++ 如果输入内容为空，则发出提示
++ 如果不为空，输入的内容会保存到用户信息界面
++ 信息可通过输入进行更新
+
+2. 功能列表
++ 使用指南
+点击查看，浏览使用指南
++ 常见问题
+点击查看，浏览问题列表
++ 客服热线
+点击呼叫，会有小然、小潇、小玥三位客服等待着您~
++ 分享应用
+点击分享，可将小程序分享给朋友
+
+
+	</view>
+
+</view>

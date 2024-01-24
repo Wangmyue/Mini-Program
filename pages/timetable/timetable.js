@@ -95,7 +95,7 @@ Page({
 
   toDetail(){
     wx.navigateTo({
-      url: '/pages/detail/detail',
+      url: '/pages/index/index',
     })
   },
 

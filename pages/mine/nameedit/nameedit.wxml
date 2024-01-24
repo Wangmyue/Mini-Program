@@ -1,0 +1,6 @@
+<!--pages/mine/nameedit/nameedit.wxml-->
+<image class="background" src="/pages/mine/images/lightblue.jpg" mode="widthFix" ></image>
+<view class="add-page">
+    <input placeholder="输入昵称添加用户" class="add-word" type="number" bindinput="bindKeyInput" value="{{inputValue}}"  />
+     <button class="add-btn" bindtap="addbtn" >添加</button>
+</view>

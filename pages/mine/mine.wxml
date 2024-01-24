@@ -1,1 +1,65 @@
-我的设置
+<!-- <image class="background" src="/pages/mine/images/fadeblue.jpg" mode="widthFix" ></image> -->
+<view class="info" bind:tap="gotopersoninfo">个人信息
+  <image class="tapimg1" src='/pages/mine/images/图片3.jpg' mode="widthFix"></image></view>
+
+
+<view class="title">功能列表</view>
+
+<view class="tasks">
+  <view class="task">
+    <view class="name">使用指南</view>
+    <view class="description">手把手教你玩转小程序~</view>
+    <button style="width:30vw"   class="button-share-1" bind:tap="gotohelper">点击查看</button>
+  </view>
+  <view class="task-2">
+    <view class="name">常见问题</view>
+    <view class="description">你的疑惑立即解决~</view>
+    <button style="width:30vw"   class="button-share-2" bind:tap="gotoquestion">点击查看</button>
+  </view>
+  <view class="task-3">
+    <view class="name">客服热线</view>
+    <view class="description">随时准备为您服务~</view>
+    <button style="width:30vw"   class="button-share-3" bind:tap="showModal">点击呼叫</button>
+  </view>
+  <view class="task-4">
+    <view class="name">分享应用</view>
+    <view class="description">叫上朋友一起使用吧~</view>
+    <!-- <view class="button"  >点击分享</view> -->
+    <button style="width:30vw"  open-type="share" class="button-share">点击分享</button>
+  </view>
+</view>
+
+
+
+
+<!-- <button type="default" open-type="share" class="share-button">分享</button>
+ -->
+
+
+<!-- 底部弹出框 -->
+<view class="wrap">
+  <!-- <view bindtap="showModal">
+    <text>{{value}}</text>
+    <icon class="arrow"></icon>
+  </view> -->
+ 
+  <!-- modal  -->
+  <view class="modal modal-bottom-dialog" hidden="{{hideFlag}}">
+    <view class="modal-cancel" bindtap="hideModal"></view>
+    <view class="bottom-dialog-body bottom-positon" animation="{{animationData}}">
+      <!--  -->
+      <view class='Mselect'>
+        <view wx:for="{{optionList}}" wx:key="unique" data-value='{{item}}' bindtap='getOption'>
+          {{item}}
+        </view>
+      </view>
+      <view></view>
+      <view class='Mcancel' bindtap='mCancel'>
+        <text>取消</text>
+      </view>
+ 
+    </view>
+  </view>
+ 
+</view>
+

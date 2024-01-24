@@ -1,0 +1,29 @@
+<!--pages/mine/person-info/person-info.wxml-->
+<image class="background" src="/pages/mine/images/blue_kitty.jpg" mode="widthFix" ></image>
+<view class="title">用户信息</view>
+<view class="menu-item">
+  <navigator class="menu-item-main" bind:tap="gotonameedit">
+     <text class="menu-item-name">昵称</text>
+     <view class="ordtel">
+        <text class="ordtext" >{{addtel}}</text>
+     </view>            
+  </navigator>
+</view>
+<view class="menu-item">
+  <navigator class="menu-item-main" bind:tap="gotosexedit">
+     <text class="menu-item-name">性别</text>
+     <view class="ordtel">
+        <text class="ordtext">{{addtel_sex}}</text>
+        <!-- <image class="menu-item-icon"   src="/image/tel.png"></image> -->
+     </view>            
+  </navigator>
+</view>
+<view class="menu-item">
+  <navigator class="menu-item-main" bind:tap="gototeledit" >
+     <text class="menu-item-name">电话</text>
+     <view class="ordtel">
+        <text class="ordtext">{{addtel_tel}}</text>
+        <!-- <image class="menu-item-icon"   src="/image/tel.png"></image> -->
+     </view>            
+  </navigator>
+</view>

@@ -1,0 +1,23 @@
+<!--pages/mine/commonquestion/question.wxml-->
+
+
+<image class="background" src="/pages/mine/images/lightblue.jpg" mode="widthFix" ></image>
+<view class="text_helper">
+	<view class="helper-title">常见问题</view>
+	<view class="helper-text" style="white-space: pre-wrap;" >
+    <view class="sub">如何在课程表添加课程？</view>
+点击左上角我的课表，输入课程名称、时间、节数等。
+
+<view class="sub">如何生成待办事项？</view>
+待办事项可以通过在上方输入框输入回车来生成。实时显示待办数量和历史已完成待办数量。您还可以在待办和历史之间自由转移，点击左侧圆圈可完成或取消完成待办，末尾删除按钮可删除该条待办。
+
+<view class="sub">如何进行每日总结？</view>
+每日总结有两个部分，过往总结展示和记录总结。过往总结按照记录时间倒叙展示，而记录总结则包括在框内记录内容，显示记录时的日期，并在下方统计字数。注意不能删改总结。
+
+<view class="sub">如何设置个人信息？</view>
+个人信息设置包括昵称、性别、电话。您可以点击对应栏目，跳转至输入界面。如果输入内容为空，会发出提示；如果不为空，输入的内容会保存到用户信息界面，可以通过输入进行更新。
+
+
+	</view>
+
+</view>

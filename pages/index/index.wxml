@@ -1,2 +1,45 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+
+<page-meta root-font-size="system"></page-meta>
+<view class="page" data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
+    <view class="page__hd">
+        <view aria-role="heading" aria-level="1" class="page__title">我的课程</view>
+        <view class="page__desc" >查询课程名称、时段、教室</view>
+    </view>
+
+
+    <button  bindtap="toDetail" class = "butt">新建课程</button>
+  
+
+  
+ <!-- 弹出层 -->
+  
+
+   
+
+    <view class="page__bd page__bd_spacing">
+        <view class="kind-list">
+            <block wx:for="{{list}}" wx:key="id">
+                <view class="kind-list__item">
+                    <view id="{{item.id}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}" bindtap="kindToggle">
+                        <view class="weui-flex__item">{{item.name}}</view>
+                       
+                    </view>
+                    <view aria-hidden="{{item.open ? 'false' : 'true'}}" class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
+                        <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
+                            <block wx:for="{{item.pages}}" wx:for-item="page" wx:key="*this">
+                                <navigator aria-role="menuitem" url="{{page}}/{{page}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                                    <view class="weui-cell__bd">{{page}}</view>
+                                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                                </navigator>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    
+   
+    
+
+</view>

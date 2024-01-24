@@ -1,1 +1,89 @@
-/* pages/index/index.wxss */
+/*!
+ * WeUI v2.6.7 (https://github.com/weui/weui-wxss)
+ * Copyright 2023 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+ .weui-flex{
+  background: -webkit-linear-gradient(left,rgb(221, 182, 216),lightblue,rgb(83, 201, 248));
+  -webkit-box-align:center;-webkit-align-items:center;align-items:center}.weui-cells{margin-top:0;opacity:0;-webkit-transform:translateY(-50%);
+  transform:translateY(-50%);-webkit-transition:.3s;transition:.3s}.weui-cells::after,.weui-cells::before{display:none}.weui-cells_show{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}.weui-cell::before{right:15px}.kind-list__item{margin:10px 0;background-color:var(--weui-BG-2);border-radius:2px;overflow:hidden}.kind-list__item:first-child{margin-top:0}.kind-list__img{width:30px;height:30px}@media (prefers-color-scheme:dark){.page:not([data-weui-theme="light"]) .kind-list__img{-webkit-filter:invert(100) hue-rotate(180deg);filter:invert(100) hue-rotate(180deg)}}[data-weui-theme="dark"] .kind-list__img{-webkit-filter:invert(100) hue-rotate(180deg);filter:invert(100) hue-rotate(180deg)}.kind-list__item-hd{padding:20px;-webkit-transition:opacity .3s;transition:opacity .3s}.kind-list__item-hd_show{opacity:.4}.kind-list__item-bd{height:0;overflow:hidden}.kind-list__item-bd_show{height:auto}
+/* 弹出层 */
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgb(181, 205, 212);
+  opacity: 0.5;
+  z-index:1;
+}
+
+.butt{
+  background: -webkit-linear-gradient(left,rgb(221, 182, 216),lightblue,rgb(83, 201, 248));
+  border-bottom:white;
+  border-radius: 50px;
+  margin-bottom: 5%;
+  box-shadow: 20px 0px 10px 0px rgba(87, 95, 131, 0.5);
+  font-family:inset;
+}
+.modal-dialog {
+  overflow: hidden;
+  position: fixed;
+  top: 2%;
+  background: -webkit-linear-gradient(top,rgb(221, 182, 216),lightblue,rgb(83, 201, 248));
+  border-radius: 30rpx; 
+  right: 5%;
+  height: 1200rpx;
+  width: 90%;
+  z-index: 2;
+}
+.view-image{
+  width: 580rpx;
+  height: 580rpx;
+  margin-left: 50rpx;
+}
+.guanbi{
+  position:absolute;
+  width: 40rpx;
+  height:40rpx;
+  background-size:100%;
+  text-align: center; 
+  top: 10px; 
+  right: 10px;
+  font-size: 14px;
+  line-height: 50rpx;
+  
+}
+.t-title{
+  font-size:36rpx;
+  text-align: center;
+  margin: 30rpx 0;
+  font-weight: bold;
+}
+.b-title{
+  font-size:26rpx;
+  text-align:center;
+  margin-top:20rpx;
+}
+
+
+
+.page {
+  padding: 30rpx 20rpx;
+  background: -webkit-linear-gradient(top,rgb(231, 208, 228),lightblue,rgb(200, 226, 236));
+}
+
+.container{
+  text-align: center;
+}
+
+._input {
+  padding: 10rpx;
+  border: 1px solid black;
+}
+
+.save-button {
+  margin-top: 10px;
+
+}
